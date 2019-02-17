@@ -25,7 +25,7 @@ public class BasePage {
 
 
 		Properties prop= new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\vineet\\SeleniumPOMWS\\SeleniumPOM\\src\\main\\java\\TestData\\BrowserURL.properties");
+		FileInputStream fis=new FileInputStream("C:\\Users\\vineet\\POMSeleniumWS\\SeleniumPOM\\src\\main\\java\\TestData\\BrowserURL.properties");
 		prop.load(fis);
 
 		String Browser=prop.getProperty("BrowserName");
@@ -35,19 +35,19 @@ public class BasePage {
 		if (Browser.equals("Chrome"))
 		{
 
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\vineet\\SeleniumPOMWS\\SeleniumPOM\\Driver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\vineet\\POMSeleniumWS\\SeleniumPOM\\Driver\\chromedriver.exe");
 			driver=new ChromeDriver();
 
 		}else if(Browser.equals("Firefox"))
 		{
 
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\vineet\\SeleniumPOMWS\\SeleniumPOM\\Driver\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:\\Users\\vineet\\POMSeleniumWS\\SeleniumPOM\\Driver\\geckodriver.exe");
 			driver=new FirefoxDriver();
 
 
 		}else if(Browser.equals("IE"))
 		{
-			System.setProperty("webdriver.ie.driver","C:\\Users\\vineet\\SeleniumPOMWS\\SeleniumPOM\\Driver\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver","C:\\Users\\vineet\\POMSeleniumWS\\SeleniumPOM\\Driver\\IEDriverServer.exe");
 			driver=new InternetExplorerDriver();
 			
 		}
@@ -64,12 +64,12 @@ public class BasePage {
 	public Properties GetTestData() throws IOException{
 		
 		Properties p= new Properties();
-		FileInputStream f=new FileInputStream("C:\\Users\\vineet\\SeleniumPOMWS\\SeleniumPOM\\src\\main\\java\\TestData\\TestingData.properties");
+		FileInputStream f=new FileInputStream("C:\\Users\\vineet\\POMSeleniumWS\\SeleniumPOM\\src\\main\\java\\TestData\\TestingData.properties");
 		p.load(f);
 		return p;
 	}
 	
-	@BeforeTest
+	@BeforeSuite
 	public void initdriver() throws IOException{
 		
 		driver=GetBrowser();
