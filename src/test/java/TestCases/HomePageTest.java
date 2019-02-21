@@ -28,7 +28,7 @@ public class HomePageTest extends BasePage {
 		WebElement TMenu=hpt.MouseMoveToTab();
 		act.moveToElement(TMenu).build().perform();
 		Thread.sleep(4000);
-		String ab[]={"Admin","PIM","Leave","Time","Recruitment","Performance","Help"};
+		String ab[]={"Admin","PI","Leave","Time","Recruitment","Performance","Help"};
 		log.debug("Navigate to Home Page");
 		
 		List<WebElement>tabnames=hpt.GetTabName();
