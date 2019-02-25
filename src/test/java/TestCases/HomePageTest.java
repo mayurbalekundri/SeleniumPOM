@@ -42,8 +42,8 @@ public class HomePageTest extends BasePage {
 		
 	   log.error("Validating the Tab Names");
 		
-		
-		
+	//	Assert.assertTrue(false);
+		Assert.assertTrue(true);
 	}
 
 }

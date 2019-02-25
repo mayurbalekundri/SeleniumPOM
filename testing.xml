@@ -4,6 +4,7 @@
   <listeners>
   <listener class-name="Pages.ScreenShotListerner"></listener>
   <listener class-name="Resources.ExtentReporterNG"></listener>
+  <listener class-name="Pages.RetryListenerClass"></listener>
   </listeners>
   <test thread-count="5" name="Test">
      <classes>
